@@ -1,0 +1,29 @@
+<div class="container">
+    <form [formGroup]="randomNumberForm">
+        <mat-form-field class="full-width">
+            <mat-label>Favorite Number</mat-label>
+            <mat-select formControlName="favoriteNumber">
+                <mat-option *ngFor="let number of numbers" [value]="number">{{ number }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <mat-label>Number Length</mat-label>
+            <input matInput type="number" formControlName="numberLength" min="1" max="10"
+                placeholder="Enter number length">
+        </mat-form-field>
+        <div class="textcenter">
+            <button mat-raised-button color="primary" (click)="generatingNumbers()">SUBMIT</button>
+        </div>
+
+        <div class="generate_number">
+            <p *ngIf="loading">Generating...</p>
+
+            <div *ngIf="generatedNumber && !loading">
+                <p>Generated Number: {{ generatedNumber }}</p>
+            </div>
+        </div>
+    </form>
+
+
+</div>

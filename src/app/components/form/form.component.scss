@@ -1,0 +1,29 @@
+.container {
+    max-width: 500px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background: #840606;
+    padding: 50px;
+    border-radius: 10px;
+    min-height: 250px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.generate_number {
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.textcenter {
+    text-align: center;
+}
